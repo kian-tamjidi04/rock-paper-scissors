@@ -40,12 +40,12 @@ function playGame() {
     
     let humanScore = 0;
     let computerScore = 0;
-    
-    const humanChoice = getHumanChoice();
-    const computerChoice = getComputerChoice();
 
     // Keeps playing the game for 5 rounds
     while (humanScore + computerScore < 5) {
+        const humanChoice = getHumanChoice();
+        const computerChoice = getComputerChoice();
+
         playRound(humanChoice, computerChoice);
     }
 
