@@ -35,13 +35,13 @@ function playGame() {
             console.log("You picked " + human + ", computer picked " + computer + ". You lose :(");
             computerScore++;
         }
-        console.log(humanScore, computerScore);
+        console.log("Human " + humanScore + " - " + computerScore + " Computer");
     }
     
     let humanScore = 0;
     let computerScore = 0;
 
-    // Keeps playing the game for 5 rounds
+    // Keeps playing the game in a best-of-5 format
     while (humanScore + computerScore < 5) {
         const humanChoice = getHumanChoice();
         const computerChoice = getComputerChoice();
