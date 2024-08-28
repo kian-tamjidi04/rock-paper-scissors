@@ -22,7 +22,17 @@ function getHumanChoice() {
     return response;
 }
 
+function playRound(human, computer) {
+    human = human.toLowerCase();
+
+}
+
 console.log(getHumanChoice());
 
 let humanScore = 0;
 let computerScore = 0;
+
+const humanChoice = getHumanChoice();
+const computerChoice = getComputerChoice();
+
+playRound(humanChoice, computerChoice);
