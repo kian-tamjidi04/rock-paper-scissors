@@ -14,6 +14,7 @@ function getComputerChoice() {
 function getHumanChoice() {
     let response = prompt("Enter rock, paper or scissors");
     
+    // Iterates until acceptable input is given
     while (response != "rock" && response != "paper" && response != "scissors") {
         response = prompt("Invalid input. Enter rock, paper or scissors");
     }
