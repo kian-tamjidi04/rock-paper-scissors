@@ -23,8 +23,19 @@ function getHumanChoice() {
 }
 
 function playRound(human, computer) {
+    // Ensures all variations of input are accepted
     human = human.toLowerCase();
 
+    // Logic for the game
+    if (human == computer) {
+        console.log("You both picked " + human + ". It's a tie!");
+    } else if ((human == "rock" && computer == "scissors") || (human == "scissors" && computer == "paper") || (human == "paper" && computer == "rock")) {
+        console.log("You picked " + human + ", computer picked " + computer + ". You win!!");
+        humanScore++;
+    } else {
+        console.log("You picked " + human + ", computer picked " + computer + ". You lose :(");
+        computerScore++;
+    }
 }
 
 console.log(getHumanChoice());
