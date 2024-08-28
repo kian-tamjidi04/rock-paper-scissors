@@ -11,4 +11,14 @@ function getComputerChoice() {
     }
 }
 
-console.log(getComputerChoice());
+function getHumanChoice() {
+    let response = prompt("Enter rock, paper or scissors");
+    
+    while (response != "rock" && response != "paper" && response != "scissors") {
+        response = prompt("Invalid input. Enter rock, paper or scissors");
+    }
+
+    return response;
+}
+
+console.log(getHumanChoice());
