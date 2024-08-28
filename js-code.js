@@ -12,7 +12,8 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    let response = prompt("Enter rock, paper or scissors");
+    // Sanitises input
+    let response = prompt("Enter rock, paper or scissors").toLowerCase();
     
     // Iterates until acceptable input is given
     while (response != "rock" && response != "paper" && response != "scissors") {
@@ -23,9 +24,6 @@ function getHumanChoice() {
 }
 
 function playRound(human, computer) {
-    // Ensures all variations of input are accepted
-    human = human.toLowerCase();
-
     // Logic for the game
     if (human == computer) {
         console.log("You both picked " + human + ". It's a tie!");
@@ -37,8 +35,6 @@ function playRound(human, computer) {
         computerScore++;
     }
 }
-
-console.log(getHumanChoice());
 
 let humanScore = 0;
 let computerScore = 0;
