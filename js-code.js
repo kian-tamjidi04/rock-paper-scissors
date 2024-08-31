@@ -27,7 +27,7 @@ function getComputerChoice() {
 function playRound(human, computer) {
     const txt = document.createElement("p");
     const results = document.querySelector(".results");
-
+    const score = document.querySelector(".score");
     // Logic for the game
     if (human == computer) {
         txt.textContent = "You both picked " + human + ". It's a tie!";
@@ -39,8 +39,8 @@ function playRound(human, computer) {
         computerScore++;
     }
     results.appendChild(txt);
-    
-    console.log("Human " + humanScore + " - " + computerScore + " Computer");
+
+    score.textContent = "Human " + humanScore + " - " + computerScore + " Computer";
 }
 
 let humanScore = 0;
