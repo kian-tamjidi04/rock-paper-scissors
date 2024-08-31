@@ -42,12 +42,12 @@ function playGame() {
     let computerScore = 0;
 
     // Keeps playing the game in a best-of-5 format
-    while (humanScore + computerScore < 5) {
-        const humanChoice = getHumanChoice();
-        const computerChoice = getComputerChoice();
+    // while (humanScore + computerScore < 5) {
+    //     const humanChoice = getHumanChoice();
+    //     const computerChoice = getComputerChoice();
 
-        playRound(humanChoice, computerChoice);
-    }
+    //     playRound(humanChoice, computerChoice);
+    // }
 
     // Declares a winner
     if (humanScore > computerScore) {
