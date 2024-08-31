@@ -63,14 +63,14 @@ const rockBtn = document.querySelector(".rock");
 const paperBtn = document.querySelector(".paper");
 const scissorsBtn = document.querySelector(".scissors");
 
-rockBtn.addEventListener("click", () => {
+rockBtn.addEventListener("click", function () {
     playRound("rock", getComputerChoice());
 });
 
-paperBtn.addEventListener("click", () => {
+paperBtn.addEventListener("click", function () {
     playRound("paper", getComputerChoice());
 });
 
-scissorsBtn.addEventListener("click", () => {
+scissorsBtn.addEventListener("click", function () {
     playRound("scissors", getComputerChoice());
 });
