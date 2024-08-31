@@ -28,6 +28,7 @@ function playRound(human, computer) {
     const txt = document.createElement("p");
     const results = document.querySelector(".results");
     const score = document.querySelector(".score");
+
     // Logic for the game
     if (human == computer) {
         txt.textContent = "You both picked " + human + ". It's a tie!";
@@ -38,31 +39,24 @@ function playRound(human, computer) {
         txt.textContent = "You picked " + human + ", computer picked " + computer + ". You lose :(";
         computerScore++;
     }
-    results.appendChild(txt);
 
+    results.appendChild(txt);
     score.textContent = "Human " + humanScore + " - " + computerScore + " Computer";
+
+    checkWinner(humanScore, computerScore);
 }
 
 let humanScore = 0;
 let computerScore = 0;
 
-    // Keeps playing the game in a best-of-5 format
-    // while (humanScore + computerScore < 5) {
-    //     const humanChoice = getHumanChoice();
-    //     const computerChoice = getComputerChoice();
-
-    //     playRound(humanChoice, computerChoice);
-    // }
-
+function checkWinner(h, c) {
     // Declares a winner
-    // if (humanScore > computerScore) {
-    //     alert("You won!")
-    // } else {
-    //     alert("The computer won")
-    // }
-// }
-
-// playGame();
+    if (h == 5) {
+        alert("You won! Press reset for a new game")
+    } else if (c == 5) {
+        alert("The computer won. Press reset for a new game")
+    }
+}
 
 const rockBtn = document.querySelector(".rock");
 const paperBtn = document.querySelector(".paper");
