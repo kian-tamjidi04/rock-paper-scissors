@@ -61,6 +61,8 @@ function checkWinner(h, c) {
 const rockBtn = document.querySelector(".rock");
 const paperBtn = document.querySelector(".paper");
 const scissorsBtn = document.querySelector(".scissors");
+const resetBtn = document.querySelector(".reset");
+
 
 rockBtn.addEventListener("click", function () {
     playRound("rock", getComputerChoice());
@@ -72,4 +74,12 @@ paperBtn.addEventListener("click", function () {
 
 scissorsBtn.addEventListener("click", function () {
     playRound("scissors", getComputerChoice());
+});
+
+resetBtn.addEventListener("click", function () {
+    humanScore = 0;
+    computerScore = 0;
+
+    const score = document.querySelector(".score");
+    score.textContent = "Human " + humanScore + " - " + computerScore + " Computer";
 });
