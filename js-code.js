@@ -82,4 +82,9 @@ resetBtn.addEventListener("click", function () {
 
     const score = document.querySelector(".score");
     score.textContent = "Human " + humanScore + " - " + computerScore + " Computer";
+
+    const results = document.querySelector(".results"); 
+    while (results.firstChild) {
+        results.removeChild(results.firstChild);
+    }
 });
