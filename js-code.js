@@ -25,16 +25,21 @@ function getComputerChoice() {
 
 // function playGame() {
 function playRound(human, computer) {
+    const txt = document.createElement("p");
+    const results = document.querySelector(".results");
+
     // Logic for the game
     if (human == computer) {
-        console.log("You both picked " + human + ". It's a tie!");
+        txt.textContent = "You both picked " + human + ". It's a tie!";
     } else if ((human == "rock" && computer == "scissors") || (human == "scissors" && computer == "paper") || (human == "paper" && computer == "rock")) {
-        console.log("You picked " + human + ", computer picked " + computer + ". You win!!");
+        txt.textContent = "You picked " + human + ", computer picked " + computer + ". You win!!";
         humanScore++;
     } else {
-        console.log("You picked " + human + ", computer picked " + computer + ". You lose :(");
+        txt.textContent = "You picked " + human + ", computer picked " + computer + ". You lose :(";
         computerScore++;
     }
+    results.appendChild(txt);
+    
     console.log("Human " + humanScore + " - " + computerScore + " Computer");
 }
 
